@@ -46,7 +46,7 @@
         }
 
         .hero-section {
-            background-color: #3C3632;
+            background-color: #1F1B18;
             color: #FAF8F5;
         }
 
@@ -99,10 +99,10 @@
         }
 
         .btn-animated-secondary {
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(0, 0, 0, 0.45);
             color: #ffffff;
             font-weight: 600;
-            border: 1px solid rgba(255, 255, 255, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(8px);
             border-radius: 0.375rem;
             transition: all 0.3s ease;
@@ -152,14 +152,14 @@
     </a>
 
     <!-- Navigation Bar -->
-    <header class="fixed top-0 left-0 right-0 z-50 px-4 py-3 bg-[#2A2522]/90 backdrop-blur-md border-b border-white/10 text-white">
+    <header class="fixed top-0 left-0 right-0 z-50 px-4 py-3 bg-[#1D1A18]/95 backdrop-blur-md border-b border-white/10 text-white">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <a href="#" class="flex items-center gap-2 group shrink-0">
                 <div class="w-8 h-8 rounded bg-emerald-600 flex items-center justify-center text-white text-sm font-black shadow-md">
                     <i class="fas fa-hammer"></i>
                 </div>
                 <div>
-                    <span class="font-serif font-bold text-lg tracking-wider block leading-none">MODORA DEMO</span>
+                    <span class="font-serif font-bold text-base sm:text-lg tracking-wider block leading-none">MODORA DEMO</span>
                     <span class="text-[9px] text-amber-300/80 font-medium uppercase tracking-widest block mt-0.5">Interior & Carpentry</span>
                 </div>
             </a>
@@ -189,7 +189,7 @@
         </div>
 
         <!-- Mobile Dropdown Menu -->
-        <nav id="mobileMenu" class="hidden lg:hidden bg-[#2A2522] border-t border-white/10 px-4 py-4 mt-3 flex-col space-y-3 text-xs uppercase tracking-widest text-slate-300">
+        <nav id="mobileMenu" class="hidden lg:hidden bg-[#1D1A18] border-t border-white/10 px-4 py-4 mt-3 flex-col space-y-3 text-xs uppercase tracking-widest text-slate-300">
             <a href="#home" onclick="toggleMobileMenu()" class="block py-1 hover:text-emerald-400">Home</a>
             <a href="#about" onclick="toggleMobileMenu()" class="block py-1 hover:text-emerald-400">About Us</a>
             <a href="#services" onclick="toggleMobileMenu()" class="block py-1 hover:text-emerald-400">Services</a>
@@ -206,59 +206,64 @@
         </nav>
     </header>
 
-    <!-- Luxury Editorial Hero Section -->
-    <section id="home" class="hero-section relative min-h-[90vh] pt-28 pb-16 px-4 flex items-center overflow-hidden">
+    <!-- Mobile-Optimized Hero Section -->
+    <section id="home" class="hero-section relative min-h-[85vh] sm:min-h-[90vh] pt-24 pb-12 sm:pt-28 sm:pb-16 px-4 flex items-center justify-center overflow-hidden">
+        
+        <!-- Mobile & Desktop Responsive Background Image -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000" alt="Interior Architectural Background" class="w-full h-full object-cover opacity-25 filter brightness-75">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#2A2522] via-[#2A2522]/80 to-transparent"></div>
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000" 
+                 alt="Interior Architectural Background" 
+                 class="w-full h-full object-cover object-center sm:object-center opacity-70 sm:opacity-65">
+            <!-- Gradient Overlay Designed to Prevent Clipping & Maintain Readability -->
+            <div class="absolute inset-0 bg-gradient-to-b from-[#1F1B18]/70 via-[#1F1B18]/50 to-[#1F1B18]"></div>
         </div>
 
         <div class="max-w-6xl mx-auto text-center relative z-10 w-full" data-aos="fade-up">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-amber-200 text-[11px] font-medium tracking-widest uppercase mb-6 backdrop-blur-md">
-                <i class="fas fa-star text-amber-400 text-[10px]"></i>
-                <span>Architectural Interior & Precision Woodworks</span>
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 sm:px-3.5 rounded-full bg-black/60 border border-white/20 text-amber-300 text-[10px] sm:text-[11px] font-medium tracking-widest uppercase mb-4 sm:mb-6 backdrop-blur-md max-w-full">
+                <i class="fas fa-star text-amber-400 text-[9px] sm:text-[10px] shrink-0"></i>
+                <span class="truncate">Architectural Interior & Woodworks</span>
             </div>
 
-            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-slate-100 leading-tight mb-6 max-w-4xl mx-auto">
+            <h1 class="font-serif text-2xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white leading-tight mb-4 sm:mb-6 max-w-4xl mx-auto drop-shadow-lg">
                 <span class="block">Ceiling Engineering &</span>
                 <span class="block italic font-serif text-amber-200">Interior Carpentry Excellence</span>
             </h1>
 
-            <p class="text-slate-300 font-light text-sm sm:text-base lg:text-lg mb-8 leading-relaxed max-w-2xl mx-auto">
+            <p class="text-slate-100 font-light text-xs sm:text-base lg:text-lg mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto drop-shadow">
                 Crafting refined architectural environments with precision gypsum false ceilings, acoustic timber baffles, custom TV wall paneling, and bespoke interior woodwork.
             </p>
 
-            <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
-                <a href="mailto:noReplay@gmail.com" class="btn-animated-primary px-6 py-3 text-xs uppercase tracking-widest">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-12">
+                <a href="mailto:noReplay@gmail.com" class="btn-animated-primary w-full sm:w-auto px-6 py-3 text-xs uppercase tracking-widest">
                     <i class="fas fa-paper-plane text-xs"></i> Send Inquiry Email
                 </a>
-                <button onclick="openModal('Ceiling & Carpentry Specifications', 'Includes high-density gypsum boards, GI channel framing, hidden LED profiles, and custom veneer carpentry.', 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1000')" class="btn-animated-secondary px-6 py-3 text-xs uppercase tracking-widest">
+                <button onclick="openModal('Ceiling & Carpentry Specifications', 'Includes high-density gypsum boards, GI channel framing, hidden LED profiles, and custom veneer carpentry.', 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1000')" class="btn-animated-secondary w-full sm:w-auto px-6 py-3 text-xs uppercase tracking-widest">
                     <i class="fas fa-eye text-emerald-400"></i> View Rate Offer
                 </button>
             </div>
 
-            <!-- Direct Grid Showcase in Hero Section -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left max-w-6xl mx-auto mt-6">
-                <div class="bg-[#352F2C]/90 border border-white/10 rounded p-3 backdrop-blur-md hover:border-amber-300/40 transition-all">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600" alt="Curved Hall Gypsum" class="w-full h-36 object-cover rounded mb-2.5">
+            <!-- Grid Showcase in Hero Section -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 text-left max-w-6xl mx-auto mt-4 sm:mt-6">
+                <div class="bg-[#2A2522]/85 border border-white/20 rounded p-3 backdrop-blur-md hover:border-amber-300/60 transition-all">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600" alt="Curved Hall Gypsum" class="w-full h-32 sm:h-36 object-cover rounded mb-2">
                     <span class="text-[10px] uppercase tracking-wider text-amber-300 font-semibold block">Ceiling Design</span>
                     <h4 class="text-xs font-medium text-white">Curved Hall Gypsum Ceiling</h4>
                 </div>
 
-                <div class="bg-[#352F2C]/90 border border-white/10 rounded p-3 backdrop-blur-md hover:border-amber-300/40 transition-all">
-                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=600" alt="Timber Baffle System" class="w-full h-36 object-cover rounded mb-2.5">
+                <div class="bg-[#2A2522]/85 border border-white/20 rounded p-3 backdrop-blur-md hover:border-amber-300/60 transition-all">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=600" alt="Timber Baffle System" class="w-full h-32 sm:h-36 object-cover rounded mb-2">
                     <span class="text-[10px] uppercase tracking-wider text-amber-300 font-semibold block">Wood Baffles</span>
                     <h4 class="text-xs font-medium text-white">Architectural Timber Slats</h4>
                 </div>
 
-                <div class="bg-[#352F2C]/90 border border-white/10 rounded p-3 backdrop-blur-md hover:border-amber-300/40 transition-all">
-                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=600" alt="Fluted Louver TV Wall" class="w-full h-36 object-cover rounded mb-2.5">
+                <div class="bg-[#2A2522]/85 border border-white/20 rounded p-3 backdrop-blur-md hover:border-amber-300/60 transition-all">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=600" alt="Fluted Louver TV Wall" class="w-full h-32 sm:h-36 object-cover rounded mb-2">
                     <span class="text-[10px] uppercase tracking-wider text-amber-300 font-semibold block">TV Paneling</span>
                     <h4 class="text-xs font-medium text-white">Fluted Louver Media Wall</h4>
                 </div>
 
-                <div class="bg-[#352F2C]/90 border border-white/10 rounded p-3 backdrop-blur-md hover:border-amber-300/40 transition-all">
-                    <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&q=80&w=600" alt="Profile Lighting" class="w-full h-36 object-cover rounded mb-2.5">
+                <div class="bg-[#2A2522]/85 border border-white/20 rounded p-3 backdrop-blur-md hover:border-amber-300/60 transition-all">
+                    <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&q=80&w=600" alt="Profile Lighting" class="w-full h-32 sm:h-36 object-cover rounded mb-2">
                     <span class="text-[10px] uppercase tracking-wider text-amber-300 font-semibold block">Lighting Setup</span>
                     <h4 class="text-xs font-medium text-white">Recessed Profile Channels</h4>
                 </div>
@@ -267,22 +272,22 @@
     </section>
 
     <!-- About Us Section -->
-    <section id="about" class="py-16 px-4 bg-[#F7F4EF]">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section id="about" class="py-12 sm:py-16 px-4 bg-[#F7F4EF]">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div data-aos="fade-right">
-                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1000" alt="Ceiling and Carpentry Craft" class="rounded shadow-md w-full h-80 object-cover border border-slate-300/60">
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1000" alt="Ceiling and Carpentry Craft" class="rounded shadow-md w-full h-64 sm:h-80 object-cover border border-slate-300/60">
             </div>
             <div data-aos="fade-left">
                 <span class="text-emerald-700 font-semibold text-xs uppercase tracking-widest block mb-1">Our Craftsmanship</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-normal text-slate-900 mb-4">Our expertise in design and precision craft</h2>
-                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                <h2 class="font-serif text-2xl sm:text-4xl font-normal text-slate-900 mb-3 sm:mb-4">Our expertise in design and precision craft</h2>
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
                     Our approach focuses on honoring context and proportion using organic materials and thoughtful touches to shape spaces that feel calm, natural, and seamlessly beautiful.
                 </p>
                 <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
                     Specialized in false ceiling installations, acoustic timber baffles, custom TV wall paneling, and architectural carpentry solutions for modern residences and commercial projects.
                 </p>
                 
-                <div class="grid grid-cols-2 gap-3 mb-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 mb-6">
                     <div class="flex items-center gap-2 text-xs font-medium text-slate-800">
                         <i class="fas fa-check text-emerald-600"></i> Gypsum & POP Ceilings
                     </div>
@@ -305,34 +310,34 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-16 px-4 bg-[#EFECE6]">
+    <section id="services" class="py-12 sm:py-16 px-4 bg-[#EFECE6]">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center max-w-xl mx-auto mb-12" data-aos="fade-up">
+            <div class="text-center max-w-xl mx-auto mb-8 sm:mb-12" data-aos="fade-up">
                 <span class="text-emerald-700 font-semibold text-xs uppercase tracking-widest block mb-1">Solutions</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-normal text-slate-900">Complete interior services for modern spaces</h2>
+                <h2 class="font-serif text-2xl sm:text-4xl font-normal text-slate-900">Complete interior services for modern spaces</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div onclick="openModal('Gypsum False Ceiling', 'Includes high-grade Gypsum sheets, galvanised GI channels, jointing compound, concealed profile tracks, and dual-layer primer preparation.', 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1000')" 
-                     class="bg-[#F7F4EF] p-6 rounded border border-slate-300/60 cursor-pointer minimal-card" data-aos="fade-up">
+                     class="bg-[#F7F4EF] p-5 sm:p-6 rounded border border-slate-300/60 cursor-pointer minimal-card" data-aos="fade-up">
                     <span class="text-slate-400 font-serif text-sm block mb-2">/01</span>
-                    <h3 class="font-serif text-xl text-slate-900 mb-2">Gypsum False Ceiling</h3>
+                    <h3 class="font-serif text-lg sm:text-xl text-slate-900 mb-2">Gypsum False Ceiling</h3>
                     <p class="text-slate-600 text-xs mb-4 leading-relaxed">Designer cove lighting, floating central steps, magnetic track lights, and LED profile channels.</p>
                     <span class="text-xs font-semibold uppercase tracking-wider text-emerald-700 inline-flex items-center gap-1">Details <i class="fas fa-arrow-right text-[10px]"></i></span>
                 </div>
 
                 <div onclick="openModal('Timber Baffle & Slatted Ceilings', 'Precision-milled wooden baffles with hidden structural support framing, ideal for dining zones, corridors, and entrance foyers.', 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1000')" 
-                     class="bg-[#F7F4EF] p-6 rounded border border-slate-300/60 cursor-pointer minimal-card" data-aos="fade-up" data-aos-delay="100">
+                     class="bg-[#F7F4EF] p-5 sm:p-6 rounded border border-slate-300/60 cursor-pointer minimal-card" data-aos="fade-up" data-aos-delay="100">
                     <span class="text-slate-400 font-serif text-sm block mb-2">/02</span>
-                    <h3 class="font-serif text-xl text-slate-900 mb-2">Timber Baffle Ceilings</h3>
+                    <h3 class="font-serif text-lg sm:text-xl text-slate-900 mb-2">Timber Baffle Ceilings</h3>
                     <p class="text-slate-600 text-xs mb-4 leading-relaxed">Architectural wood slats, veneer finishes, and seamlessly integrated linear light channels.</p>
                     <span class="text-xs font-semibold uppercase tracking-wider text-emerald-700 inline-flex items-center gap-1">Details <i class="fas fa-arrow-right text-[10px]"></i></span>
                 </div>
 
                 <div onclick="openModal('TV Wall Carpentry & Paneling', 'Complete living room media consoles with charcoal fluted louvers, backlit UV marble sheets, and hidden wiring channels.', 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1000')" 
-                     class="bg-[#F7F4EF] p-6 rounded border border-slate-300/60 cursor-pointer minimal-card" data-aos="fade-up" data-aos-delay="200">
+                     class="bg-[#F7F4EF] p-5 sm:p-6 rounded border border-slate-300/60 cursor-pointer minimal-card" data-aos="fade-up" data-aos-delay="200">
                     <span class="text-slate-400 font-serif text-sm block mb-2">/03</span>
-                    <h3 class="font-serif text-xl text-slate-900 mb-2">TV Wall Carpentry</h3>
+                    <h3 class="font-serif text-lg sm:text-xl text-slate-900 mb-2">TV Wall Carpentry</h3>
                     <p class="text-slate-600 text-xs mb-4 leading-relaxed">Fluted louver paneling, custom floating media consoles, and backlit stone-finish backdrops.</p>
                     <span class="text-xs font-semibold uppercase tracking-wider text-emerald-700 inline-flex items-center gap-1">Details <i class="fas fa-arrow-right text-[10px]"></i></span>
                 </div>
@@ -341,21 +346,21 @@
     </section>
 
     <!-- Products Showcase Section -->
-    <section id="products" class="py-16 px-4 bg-[#F7F4EF]">
+    <section id="products" class="py-12 sm:py-16 px-4 bg-[#F7F4EF]">
         <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-4">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 sm:mb-10 gap-4">
                 <div>
                     <span class="text-emerald-700 font-semibold text-xs uppercase tracking-widest block mb-1">Product Catalog</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-normal text-slate-900">Smart interior solutions for modern living</h2>
+                    <h2 class="font-serif text-2xl sm:text-4xl font-normal text-slate-900">Smart interior solutions for modern living</h2>
                 </div>
                 <a href="mailto:noReplay@gmail.com" class="text-xs font-bold uppercase tracking-wider text-slate-800 underline underline-offset-4 hover:text-emerald-700">
                     View All Products
                 </a>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                 <div class="bg-white rounded overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="Curved Gypsum Ceiling" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="Curved Gypsum Ceiling" class="w-full h-44 sm:h-48 object-cover">
                     <div class="p-4">
                         <span class="text-[10px] uppercase font-semibold text-emerald-700 block mb-1">False Ceiling</span>
                         <h3 class="font-serif text-base text-slate-900 mb-1">Curved Cove Gypsum Setup</h3>
@@ -364,7 +369,7 @@
                 </div>
 
                 <div class="bg-white rounded overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800" alt="Timber Baffles" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800" alt="Timber Baffles" class="w-full h-44 sm:h-48 object-cover">
                     <div class="p-4">
                         <span class="text-[10px] uppercase font-semibold text-emerald-700 block mb-1">Woodwork</span>
                         <h3 class="font-serif text-base text-slate-900 mb-1">Architectural Timber Baffles</h3>
@@ -373,7 +378,7 @@
                 </div>
 
                 <div class="bg-white rounded overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800" alt="Fluted Louver TV Wall" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800" alt="Fluted Louver TV Wall" class="w-full h-44 sm:h-48 object-cover">
                     <div class="p-4">
                         <span class="text-[10px] uppercase font-semibold text-emerald-700 block mb-1">Wall Paneling</span>
                         <h3 class="font-serif text-base text-slate-900 mb-1">Fluted Louver Console Wall</h3>
@@ -382,7 +387,7 @@
                 </div>
 
                 <div class="bg-white rounded overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&q=80&w=800" alt="Profile Light Track" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&q=80&w=800" alt="Profile Light Track" class="w-full h-44 sm:h-48 object-cover">
                     <div class="p-4">
                         <span class="text-[10px] uppercase font-semibold text-emerald-700 block mb-1">Lighting Integration</span>
                         <h3 class="font-serif text-base text-slate-900 mb-1">Magnetic Recessed Tracks</h3>
@@ -394,18 +399,18 @@
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-16 px-4 bg-[#EFECE6]">
+    <section id="pricing" class="py-12 sm:py-16 px-4 bg-[#EFECE6]">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center max-w-xl mx-auto mb-12" data-aos="fade-up">
+            <div class="text-center max-w-xl mx-auto mb-8 sm:mb-12" data-aos="fade-up">
                 <span class="text-emerald-700 font-semibold text-xs uppercase tracking-widest block mb-1">Estimated Rates</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-normal text-slate-900">Transparent Pricing Framework</h2>
+                <h2 class="font-serif text-2xl sm:text-4xl font-normal text-slate-900">Transparent Pricing Framework</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-[#F7F4EF] border border-slate-300/70 rounded p-6 flex flex-col justify-between" data-aos="fade-up">
+                <div class="bg-[#F7F4EF] border border-slate-300/70 rounded p-5 sm:p-6 flex flex-col justify-between" data-aos="fade-up">
                     <div>
                         <span class="text-[10px] font-bold text-emerald-700 uppercase tracking-widest">Standard Tier</span>
-                        <h3 class="font-serif text-2xl font-normal text-slate-900 mt-1 mb-4">Gypsum Ceiling</h3>
+                        <h3 class="font-serif text-xl sm:text-2xl font-normal text-slate-900 mt-1 mb-4">Gypsum Ceiling</h3>
                         <div class="mb-6">
                             <span class="text-3xl font-serif text-slate-900">₹120</span>
                             <span class="text-slate-500 text-xs font-medium">/ sq.ft</span>
@@ -422,11 +427,11 @@
                     </a>
                 </div>
 
-                <div class="bg-white border-2 border-emerald-600 rounded p-6 relative flex flex-col justify-between shadow-md" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white border-2 border-emerald-600 rounded p-5 sm:p-6 relative flex flex-col justify-between shadow-md" data-aos="fade-up" data-aos-delay="100">
                     <span class="absolute -top-3 right-4 bg-emerald-600 text-white text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded">Recommended</span>
                     <div>
                         <span class="text-[10px] font-bold text-emerald-700 uppercase tracking-widest">Premium Tier</span>
-                        <h3 class="font-serif text-2xl font-normal text-slate-900 mt-1 mb-4">Ceiling + Profile LED</h3>
+                        <h3 class="font-serif text-xl sm:text-2xl font-normal text-slate-900 mt-1 mb-4">Ceiling + Profile LED</h3>
                         <div class="mb-6">
                             <span class="text-3xl font-serif text-slate-900">₹145</span>
                             <span class="text-slate-500 text-xs font-medium">/ sq.ft</span>
@@ -443,10 +448,10 @@
                     </a>
                 </div>
 
-                <div class="bg-[#F7F4EF] border border-slate-300/70 rounded p-6 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-[#F7F4EF] border border-slate-300/70 rounded p-5 sm:p-6 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
                     <div>
                         <span class="text-[10px] font-bold text-amber-800 uppercase tracking-widest">Bespoke Carpentry</span>
-                        <h3 class="font-serif text-2xl font-normal text-slate-900 mt-1 mb-4">Custom Woodworks</h3>
+                        <h3 class="font-serif text-xl sm:text-2xl font-normal text-slate-900 mt-1 mb-4">Custom Woodworks</h3>
                         <div class="mb-6">
                             <span class="text-xl font-serif text-slate-900">Custom Estimate</span>
                         </div>
@@ -466,12 +471,12 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="py-16 px-4 bg-[#F7F4EF]">
+    <section id="gallery" class="py-12 sm:py-16 px-4 bg-[#F7F4EF]">
         <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-4">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 sm:mb-10 gap-4">
                 <div>
                     <span class="text-emerald-700 font-semibold text-xs uppercase tracking-widest block mb-1">Portfolio</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-normal text-slate-900">Modern interior projects for inspired living</h2>
+                    <h2 class="font-serif text-2xl sm:text-4xl font-normal text-slate-900">Modern interior projects for inspired living</h2>
                 </div>
                 <a href="mailto:noReplay@gmail.com" class="text-xs font-bold uppercase tracking-wider text-slate-800 underline underline-offset-4 hover:text-emerald-700">
                     Request Full Catalog
@@ -481,7 +486,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div onclick="openModal('Curved Living Room False Ceiling', 'Gypsum false ceiling with seamless curved cove lighting troughs, recessed LED spots, and smooth plaster coat.', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1000')" 
                      class="bg-white rounded overflow-hidden border border-slate-200 cursor-pointer minimal-card" data-aos="fade-up">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="Curved Hall Ceiling" class="w-full h-52 object-cover">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="Curved Hall Ceiling" class="w-full h-48 sm:h-52 object-cover">
                     <div class="p-4">
                         <span class="text-[10px] uppercase tracking-wider font-semibold text-emerald-700 block mb-1">Gypsum Work</span>
                         <h3 class="font-serif text-base text-slate-900">Curved Hall Gypsum Design</h3>
@@ -490,7 +495,7 @@
 
                 <div onclick="openModal('Master Bedroom Step Ceiling', 'Minimalist dual-level step ceiling with perimeter warm white cove lighting designed for master suites.', 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1000')" 
                      class="bg-white rounded overflow-hidden border border-slate-200 cursor-pointer minimal-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=800" alt="Master Suite Ceiling" class="w-full h-52 object-cover">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=800" alt="Master Suite Ceiling" class="w-full h-48 sm:h-52 object-cover">
                     <div class="p-4">
                         <span class="text-[10px] uppercase tracking-wider font-semibold text-emerald-700 block mb-1">Gypsum Work</span>
                         <h3 class="font-serif text-base text-slate-900">Master Bedroom Step Ceiling</h3>
@@ -499,7 +504,7 @@
 
                 <div onclick="openModal('Architectural Wooden Baffle Ceiling', 'Custom timber slatted baffle ceiling with embedded linear profile slots for dining rooms and lobbies.', 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1000')" 
                      class="bg-white rounded overflow-hidden border border-slate-200 cursor-pointer minimal-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800" alt="Timber Baffles" class="w-full h-52 object-cover">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800" alt="Timber Baffles" class="w-full h-48 sm:h-52 object-cover">
                     <div class="p-4">
                         <span class="text-[10px] uppercase tracking-wider font-semibold text-amber-800 block mb-1">Wood Baffles</span>
                         <h3 class="font-serif text-base text-slate-900">Architectural Wooden Baffles</h3>
@@ -510,16 +515,16 @@
     </section>
 
     <!-- Simple Notice Video Section -->
-    <section id="videos" class="py-16 px-4 bg-[#EFECE6]">
+    <section id="videos" class="py-12 sm:py-16 px-4 bg-[#EFECE6]">
         <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
             <span class="text-emerald-700 font-semibold text-xs uppercase tracking-widest block mb-2">Video Demonstrations</span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-normal text-slate-900 mb-4">Ceiling & Carpentry Walkthroughs</h2>
+            <h2 class="font-serif text-2xl sm:text-4xl font-normal text-slate-900 mb-4">Ceiling & Carpentry Walkthroughs</h2>
             
-            <div class="p-6 bg-[#F7F4EF] border border-slate-300 rounded max-w-xl mx-auto my-6">
-                <p class="text-slate-700 font-medium text-sm sm:text-base">
+            <div class="p-5 sm:p-6 bg-[#F7F4EF] border border-slate-300 rounded max-w-xl mx-auto my-4 sm:my-6">
+                <p class="text-slate-700 font-medium text-xs sm:text-base">
                     Video not configured, as per client requirement this we will update.
                 </p>
-                <p class="text-slate-500 text-xs mt-2">
+                <p class="text-slate-500 text-[11px] sm:text-xs mt-2">
                     Additional video demonstrations and project walkthroughs will be integrated into this section in future updates.
                 </p>
             </div>
@@ -527,16 +532,16 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 px-4 bg-[#2A2522] text-white">
+    <section id="contact" class="py-12 sm:py-16 px-4 bg-[#2A2522] text-white">
         <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
             <span class="text-amber-300 font-semibold text-xs uppercase tracking-widest block mb-2">Demo Showcase</span>
-            <h2 class="font-serif text-3xl sm:text-5xl font-normal mb-4">Get In Touch</h2>
-            <p class="text-slate-300 text-xs sm:text-sm mb-8 max-w-lg mx-auto leading-relaxed">
+            <h2 class="font-serif text-2xl sm:text-5xl font-normal mb-4">Get In Touch</h2>
+            <p class="text-slate-300 text-xs sm:text-sm mb-6 sm:mb-8 max-w-lg mx-auto leading-relaxed">
                 This is a demonstration website showcasing interior ceiling engineering and precision woodworks.
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="mailto:noReplay@gmail.com" class="btn-animated-primary px-8 py-3 text-xs uppercase tracking-widest">
+                <a href="mailto:noReplay@gmail.com" class="btn-animated-primary w-full sm:w-auto px-8 py-3 text-xs uppercase tracking-widest">
                     <i class="fas fa-envelope text-sm"></i> Send Inquiry Email
                 </a>
             </div>
@@ -544,8 +549,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#1D1A18] text-slate-400 py-8 px-4 text-center text-xs border-t border-white/10">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+    <footer class="bg-[#1D1A18] text-slate-400 py-6 sm:py-8 px-4 text-center text-xs border-t border-white/10">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
             <p>© 2026 Modora Demo • Interior Carpentry & Ceiling Showcase. For Demo Purposes Only.</p>
             <div class="flex gap-4">
                 <a href="mailto:noReplay@gmail.com" class="hover:text-amber-300 transition-colors"><i class="fas fa-envelope text-base"></i></a>
@@ -556,14 +561,14 @@
     <!-- Interactive Details Popup Modal -->
     <div id="infoModal" class="fixed inset-0 z-[1000] bg-slate-900/80 backdrop-blur-md hidden flex items-center justify-center p-4">
         <div class="bg-white rounded max-w-md w-full overflow-hidden shadow-2xl border border-slate-200">
-            <div class="relative h-44 bg-slate-900">
+            <div class="relative h-40 sm:h-44 bg-slate-900">
                 <img id="modalImg" src="" alt="Detail Preview" class="w-full h-full object-cover">
                 <button onclick="closeModal()" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black transition-colors text-xs">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            <div class="p-6">
-                <h3 id="modalTitle" class="font-serif text-xl font-normal text-slate-900 mb-2"></h3>
+            <div class="p-5 sm:p-6">
+                <h3 id="modalTitle" class="font-serif text-lg sm:text-xl font-normal text-slate-900 mb-2"></h3>
                 <p id="modalDesc" class="text-slate-600 text-xs leading-relaxed mb-6"></p>
                 <div class="flex gap-3">
                     <a href="mailto:noReplay@gmail.com" class="btn-animated-primary flex-1 py-2.5 text-xs uppercase tracking-wider">
